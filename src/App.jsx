@@ -69,8 +69,8 @@ function App() {
           <h1 className="hero-title">Gibson Coutley</h1>
           <p className="hero-subtitle">Front End Developer</p>
           <p className="hero-description">
-            Passionate about creating innovative web solutions with modern technologies
-          </p>
+                Passionate and proficient about creating innovative web solutions with modern technologies
+              </p>
         </div>
         <div className="globe-section">
           <ErrorBoundary>
@@ -100,8 +100,7 @@ function App() {
           <div className="container">
             <h2>About Me</h2>
             <p>
-              I'm a passionate front-end developer with expertise in modern web technologies. 
-              I love building interactive applications and solving complex problems through code.
+              I'm a passionate and proficient front-end developer with expertise in modern web technologies. I love building interactive applications and solving complex problems through code.
             </p>
           </div>
         </section>
