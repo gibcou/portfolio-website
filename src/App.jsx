@@ -1,5 +1,5 @@
 import React from 'react';
-import SpinningGlobe from './components/SpinningGlobe';
+// import SpinningGlobe from './components/SpinningGlobe';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           </p>
         </div>
         <div className="globe-section">
-          <SpinningGlobe />
+          <div style={{width: '300px', height: '300px', background: 'linear-gradient(45deg, #ff0000, #ff6b6b)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '18px'}}>3D Globe Loading...</div>
         </div>
       </header>
       
