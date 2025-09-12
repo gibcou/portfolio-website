@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import SpinningGlobe from './components/SpinningGlobe';
 import './App.css';
 
@@ -44,6 +44,24 @@ class ErrorBoundary extends React.Component {
 }
 
 function App() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.pageYOffset > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="App">
       <header className="hero-section">
@@ -122,6 +140,16 @@ function App() {
           </div>
         </section>
       </main>
+      
+      {showScrollTop && (
+        <button 
+          className="scroll-to-top-btn" 
+          onClick={scrollToTop}
+          aria-label="Return to top"
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 }
