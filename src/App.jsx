@@ -1,6 +1,47 @@
-import React from 'react';
-// import SpinningGlobe from './components/SpinningGlobe';
+import React, { Suspense } from 'react';
+import SpinningGlobe from './components/SpinningGlobe';
 import './App.css';
+
+// Error Boundary Component
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.log('3D Globe Error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          width: '300px', 
+          height: '300px', 
+          background: 'linear-gradient(45deg, #ff0000, #ff6b6b)', 
+          borderRadius: '50%', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          color: 'white', 
+          fontSize: '16px',
+          textAlign: 'center',
+          padding: '20px',
+          boxSizing: 'border-box'
+        }}>
+          Interactive 3D Globe<br/>Loading...
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 function App() {
   return (
@@ -14,7 +55,25 @@ function App() {
           </p>
         </div>
         <div className="globe-section">
-          <div style={{width: '300px', height: '300px', background: 'linear-gradient(45deg, #ff0000, #ff6b6b)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '18px'}}>3D Globe Loading...</div>
+          <ErrorBoundary>
+            <Suspense fallback={
+              <div style={{
+                width: '300px', 
+                height: '300px', 
+                background: 'linear-gradient(45deg, #ff0000, #ff6b6b)', 
+                borderRadius: '50%', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                color: 'white', 
+                fontSize: '16px'
+              }}>
+                Loading 3D Globe...
+              </div>
+            }>
+              <SpinningGlobe />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </header>
       
