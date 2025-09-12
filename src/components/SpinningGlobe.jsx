@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Text, OrbitControls } from '@react-three/drei';
 
 function RotatingGlobe() {
   const meshRef = useRef();
   const textGroupRef = useRef();
+  const [isMobile, setIsMobile] = useState(false);
 
   // Front-end technologies
   const languages = [
@@ -12,13 +13,32 @@ function RotatingGlobe() {
     'CSS3', 'Sass', 'Vue.js', 'Next.js', 'Tailwind', 'Git', 'Figma'
   ];
 
-  // Rotate the entire group
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth <= 768;
+      
+      setIsMobile(mobileRegex.test(userAgent) || (isTouchDevice && isSmallScreen));
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Rotate the entire group - disabled on mobile
   useFrame((state, delta) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += delta * 0.3;
-    }
-    if (textGroupRef.current) {
-      textGroupRef.current.rotation.y += delta * 0.3;
+    if (!isMobile) {
+      if (meshRef.current) {
+        meshRef.current.rotation.y += delta * 0.3;
+      }
+      if (textGroupRef.current) {
+        textGroupRef.current.rotation.y += delta * 0.3;
+      }
     }
   });
 
@@ -72,6 +92,25 @@ function RotatingGlobe() {
 }
 
 function SpinningGlobe() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth <= 768;
+      
+      setIsMobile(mobileRegex.test(userAgent) || (isTouchDevice && isSmallScreen));
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div className="globe-container" style={{ width: '100%', height: '100vh' }}>
       <Canvas
@@ -85,7 +124,7 @@ function SpinningGlobe() {
         <OrbitControls 
           enableZoom={false} 
           enablePan={false}
-          autoRotate={true}
+          autoRotate={!isMobile}
           autoRotateSpeed={0.8}
           minDistance={4}
           maxDistance={12}
