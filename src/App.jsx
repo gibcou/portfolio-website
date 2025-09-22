@@ -125,7 +125,7 @@ function App() {
                 <a href="https://skinstric-intern-amber.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
               </div>
               <div className="project-card">
-                <h3>Gibson Internship Project</h3>
+                <h3>NFT Project</h3>
                 <p>A React application showcasing development skills and modern web technologies, built with Create React App framework</p>
                 <a href="https://gibcou.github.io/gibson-internship/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
               </div>
