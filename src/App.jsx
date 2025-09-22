@@ -139,11 +139,11 @@ function App() {
             <p>Review my full professional background and experience</p>
             <div className="resume-content">
               <a 
-                href="https://docs.google.com/document/d/118Bs4G9FOo3_-xKx-oYRg9x5nKhjmXbn/edit?usp=sharing&rtpof=true&sd=true" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="resume-link"
-              >
+            href="https://docs.google.com/document/d/1DVOdVBcRuWxiWIipYIj1M7K0k1aqor5uH7a-su3_Yjo/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-link"
+          >
                 <div className="resume-card">
                   <div className="resume-icon">📄</div>
                   <h3>View Resume</h3>
