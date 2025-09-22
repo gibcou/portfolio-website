@@ -120,9 +120,36 @@ function App() {
                 <a href="https://gibcou.github.io/subscription-marketplace/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
               </div>
               <div className="project-card">
-                <h3>Project 3</h3>
-                <p>Yet another impressive project in your portfolio</p>
+                <h3>Skinstric AI Skincare</h3>
+                <p>An AI-powered skincare application that creates highly-personalized routines tailored to individual skin needs using sophisticated algorithms</p>
+                <a href="https://skinstric-intern-amber.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
               </div>
+              <div className="project-card">
+                <h3>Gibson Internship Project</h3>
+                <p>A React application showcasing development skills and modern web technologies, built with Create React App framework</p>
+                <a href="https://gibcou.github.io/gibson-internship/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="resume-section">
+          <div className="container">
+            <h2>Resume</h2>
+            <p>Review my full professional background and experience</p>
+            <div className="resume-content">
+              <a 
+                href="https://docs.google.com/document/d/118Bs4G9FOo3_-xKx-oYRg9x5nKhjmXbn/edit?usp=sharing&rtpof=true&sd=true" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="resume-link"
+              >
+                <div className="resume-card">
+                  <div className="resume-icon">📄</div>
+                  <h3>View Resume</h3>
+                  <p>Click to view my full resume in Google Docs</p>
+                </div>
+              </a>
             </div>
           </div>
         </section>
@@ -134,7 +161,7 @@ function App() {
             <div className="contact-links">
               <a href="mailto:gibcoutley@gmail.com" className="contact-link">Email</a>
               <a href="https://github.com/gibcou" className="contact-link">GitHub</a>
-              <a href="https://linkedin.com/in/yourusername" className="contact-link">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/gibson-coutley-42a870385/" className="contact-link">LinkedIn</a>
             </div>
           </div>
         </section>
