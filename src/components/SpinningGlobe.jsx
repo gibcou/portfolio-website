@@ -6,10 +6,16 @@ function RotatingGlobe() {
   const meshRef = useRef();
   const textGroupRef = useRef();
 
-  // Front-end technologies
+  // All technologies - Frontend, Backend, Database, and Tools
   const languages = [
-    'JavaScript', 'React', 'TypeScript', 'HTML5',
-    'CSS3', 'Sass', 'Vue.js', 'Next.js', 'Tailwind', 'Git', 'Figma'
+    // Frontend
+    'JavaScript', 'React', 'TypeScript', 'HTML5', 'CSS3', 'Sass', 'Vue.js', 'Next.js', 'Tailwind',
+    // Backend
+    'Node.js', 'Python', 'Express.js', 'Django', 'Flask', 'Java', 'Spring Boot', 'PHP', 'Laravel',
+    // Databases
+    'MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Firebase', 'SQLite', 'Prisma',
+    // Tools & DevOps
+    'Git', 'Docker', 'AWS', 'Vercel', 'Netlify', 'GitHub Actions', 'Webpack', 'Vite', 'Figma', 'Postman'
   ];
 
   // Rotate the entire group
@@ -22,11 +28,11 @@ function RotatingGlobe() {
     }
   });
 
-  // Generate positions on sphere surface
+  // Generate positions on sphere surface with better distribution
   const getPositionOnSphere = (index, total) => {
     const phi = Math.acos(-1 + (2 * index) / total);
     const theta = Math.sqrt(total * Math.PI) * phi;
-    const radius = 2.8;
+    const radius = 3.2; // Increased radius for more technologies
     
     return [
       radius * Math.cos(theta) * Math.sin(phi),
@@ -39,7 +45,7 @@ function RotatingGlobe() {
     <>
       {/* Wireframe Sphere */}
       <mesh ref={meshRef}>
-        <sphereGeometry args={[2.2, 32, 32]} />
+        <sphereGeometry args={[2.6, 32, 32]} />
         <meshBasicMaterial 
           color="#ff0000" 
           wireframe={true} 
@@ -56,7 +62,7 @@ function RotatingGlobe() {
             <Text
               key={language}
               position={position}
-              fontSize={0.18}
+              fontSize={0.15}
               color="#ff0000"
               anchorX="center"
               anchorY="middle"
