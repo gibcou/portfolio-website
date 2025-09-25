@@ -129,6 +129,11 @@ function App() {
                 <p>A React application showcasing development skills and modern web technologies, built with Create React App framework</p>
                 <a href="https://gibcou.github.io/gibson-internship/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
               </div>
+              <div className="project-card">
+                <h3>Weather App</h3>
+                <p>Get real-time weather updates for any city with a clean and intuitive interface. Features current conditions, forecasts, and location-based weather data</p>
+                <a href="https://gibcou.github.io/weather-app-/" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
+              </div>
             </div>
           </div>
         </section>
