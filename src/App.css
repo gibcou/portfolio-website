@@ -593,6 +593,12 @@ section {
   margin-top: 3rem;
 }
 
+.resume-options {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .resume-link {
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -657,6 +663,23 @@ section {
 }
 
 .resume-card p {
+}
+
+.download-link .resume-card {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.download-link .resume-card:hover {
+  border-color: rgba(0, 123, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.1);
+}
+
+.download-link .resume-card h3 {
+  color: #007bff;
+}
+
+.download-link .resume-card:hover h3 {
+  color: #0056b3;
   color: #d0d0d0;
   line-height: 1.6;
   font-weight: 400;
