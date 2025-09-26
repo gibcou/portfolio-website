@@ -67,7 +67,7 @@ function App() {
       <header className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">Gibson Coutley</h1>
-          <p className="hero-subtitle">Front End Developer</p>
+          <p className="hero-subtitle">Frontend Developer</p>
           <p className="hero-description">
                 Passionate and proficient about creating innovative web solutions with modern technologies
               </p>
