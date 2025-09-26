@@ -145,7 +145,7 @@ function App() {
             <div className="resume-content">
               <div className="resume-options">
               <a 
-            href="https://www.icloud.com/pages/091vGAjlkCX-pl0JlTsY24KVw#Gibson"
+            href="./Gibson_Coutley_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-link"
@@ -157,7 +157,7 @@ function App() {
                 </div>
               </a>
                 <a 
-                  href="https://www.icloud.com/pages/091vGAjlkCX-pl0JlTsY24KVw#Gibson"
+                  href="./Gibson_Coutley_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="resume-link download-link"
