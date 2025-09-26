@@ -144,7 +144,7 @@ function App() {
             <p>Review my full professional background and experience</p>
             <div className="resume-content">
               <a 
-            href="https://docs.google.com/document/d/1DVOdVBcRuWxiWIipYIj1M7K0k1aqor5uH7a-su3_Yjo/edit?usp=sharing"
+            href="https://www.icloud.com/pages/091vGAjlkCX-pl0JlTsY24KVw#Gibson"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-link"
