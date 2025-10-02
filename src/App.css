@@ -666,20 +666,20 @@ section {
 }
 
 .download-link .resume-card {
-  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
 }
 
 .download-link .resume-card:hover {
-  border-color: rgba(0, 123, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.1);
+  border-color: rgba(255, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.1);
 }
 
 .download-link .resume-card h3 {
-  color: #007bff;
+  color: #ff3333;
 }
 
 .download-link .resume-card:hover h3 {
-  color: #0056b3;
+  color: #ff0000;
   color: #d0d0d0;
   line-height: 1.6;
   font-weight: 400;
